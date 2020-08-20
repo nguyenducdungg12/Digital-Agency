@@ -1,0 +1,186 @@
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(http://demo.themelogi.com/navian/wp-content/uploads/2019/06/groups.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.nav{
+    position: relative;
+    z-index: 2;
+    padding:14px 30px;
+    color:var(--white-color);
+    font-family:'Roboto'!important;
+}
+.nav__navbar{
+    display:flex;
+    list-style: none;
+    padding:0;
+    position: relative;
+    margin:0;
+}
+.nav__navbar__item{
+    margin:0 15px;
+    cursor: pointer;
+}
+.nav__navbar__item__text:after{
+    content:'';
+    display:block;
+    position: absolute;
+    left:50%;
+    width: 0;
+    top: calc(100% + 10px);
+    height: 5px;
+    transition: all .5s;
+}
+.nav__navbar__item__text:before{
+    content:'';
+    display:block;
+    position: absolute;
+    right: 50%;
+    width: 0;
+    top: calc(100% + 10px);
+    height: 5px;
+    transition: all .5s;
+}
+.nav__navbar__item:hover span:after,.nav__navbar__item:hover span:before{
+    width: 50%;
+    background:var(--green-color);
+    
+}
+.nav__navbar__item span{
+    font-size:15px;
+    position: relative;
+}
+.nav__navbar__item i {
+    font-size:10px;
+    margin-left: 7px;
+
+}
+.nav__btn{
+    border:none;
+    outline:none;
+    padding: 10px 25px;
+    color:var(--white-color);
+    background:var(--green-color);
+    border-radius: 20px;
+    transition: .3s all;
+}
+.nav__btn:hover{
+    transform: translateY(3px);
+}
+.header__introduce{
+    position: relative;
+    z-index: 1;
+    color:var(--white-color);
+    width: 60%;
+    margin:0 auto;
+    text-align: center;
+}
+.header__introduce__title{
+    font-weight: 700;
+    font-size: 65px;
+    margin-top:85px;
+}
+.header__introduce__title span{
+    color:var(--green-color);
+}
+.header__introduce__text{
+    width: 80%;
+    margin:40px auto 25px;
+}
+.header__introduce__form{
+    display:flex;
+    width: 82%;
+    margin:0 auto;
+}
+.header__introduce__form__input{
+    flex:1;
+    padding: 12px 20px;
+    font-size:14px;
+}
+.header__introduce__form__input:focus{
+    outline: none;
+}
+.header__introduce__form__btn{
+    border:none;
+    outline: none;
+    margin:0;
+    padding: 15px 60px;
+    font-size: 14px;
+    color:var(--white-color);
+    background:var(--green-color);
+}
+.header__video{
+    display:flex;
+    width: 29%;
+    margin:30px auto 0;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.header__video__icon{
+    width: 66px;
+    height: 66px;
+    border:6px solid var(--white-color);
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(255,255,255,0.2);
+}
+.header__video__title{
+    font-size: 14px;
+}
+.nav__dropdown{
+    position: absolute;
+    top:calc(100% + 15px);
+    width: 1050px;
+    left:-200px;
+    z-index: 10;
+    display:none;
+}
+.nav__navbar__item:hover .nav__dropdown{
+    display:block;
+}
+.nav__dropdown__img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrap_img{
+    height: 100%;
+}
+.nav__dropdown__item{
+    background:rgb(27,26,26);
+    padding:27px 40px 20px;
+}
+.nav__dropdown__item__title{
+    margin-top:20px;
+    font-size:18px;
+    font-weight: 700;
+    border-bottom: 1px solid rgb(88, 87, 87);
+    padding-bottom: 15px;
+}
+.nav__dropdown__item__list{
+    list-style: none;
+    margin:20px 0 0 0 ;
+}
+.nav__dropdown__item__list__item{
+    font-size:14px;
+    padding:10px 0;
+    padding-left: 15px;
+    transition: all .3s;
+}
+.nav__dropdown__item__list__item:hover{
+    background:rgba(255,255,255,0.4)
+}
+.nav__dropdown__item__list__item span{
+    display:inline-block;
+    padding:2px 7px;
+    font-size:12px;
+    border-radius: 12px;
+    margin-left: 7px;
+}
