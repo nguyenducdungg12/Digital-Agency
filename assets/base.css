@@ -18,3 +18,12 @@
     background:var(--black-color);
     opacity: 0.54;
 }
+@keyframes turnLeft{
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
