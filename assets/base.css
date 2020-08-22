@@ -45,3 +45,21 @@
         opacity: 1;
     }
 }
+@keyframes slideOn{
+    from{
+        transform: scaleY(0);
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+.nav_fix{
+    position: fixed!important;
+    top:0!important;
+    width: 100%!important;
+    background:var(--white-color)!important;
+    color:var(--black-color)!important;
+}

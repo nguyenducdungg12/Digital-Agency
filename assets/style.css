@@ -13,6 +13,7 @@
     padding:14px 30px;
     color:var(--white-color);
     font-family:'Roboto'!important;
+    transition: all .5s;
 }
 .nav__navbar{
     display:flex;
@@ -141,6 +142,7 @@
     left:-200px;
     z-index: 10;
     opacity: 0;
+    color:var(--white-color);
     transform-origin: top center;
     transition: all .5s;
     transform: scaleY(0);
@@ -688,9 +690,10 @@
     border-radius: 50%;
     box-shadow: 0px 5px 20px 0px #bbb;
     left:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     top:-40px;
-    line-height: 100px;
-    text-align: center;
     transform: translateX(-50%);
 }
 .plan__item__title__icon i{
@@ -887,7 +890,7 @@
     left:0;
     bottom:0;
     right:0;
-    background:rgba(0,0,0,.6)
+    background:rgba(0,0,0,.45)
 }
 .blog__item__img{
     width: 100%;
@@ -913,7 +916,7 @@
     color:var(--green-color);
     font-size: 14px;
     letter-spacing: 1.5px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .blog__item__content__time__logo{
     width: 25px!important;
@@ -990,13 +993,16 @@
 }
 .contact__right__list__item{
     position: relative;
+    
+}
+.contact__right__list__item__show{
+    position: relative;
     border:1px solid var(--white-color);
     display:flex;
     padding:16px 25px;
     margin-bottom: 10px;
     justify-content: space-between;
     cursor: pointer;
-    
 }
 .contact__right__list__item__main i{
     margin-right: 10px;
@@ -1007,8 +1013,9 @@
     font-size: 17px;
 }
 .contact__right__list__item__hide{
-    position: absolute;
-    opacity: 0;
+    display: none;
+    transform-origin: top center;
+    animation: slideOn .5s forwards;
 }
 
 /* footer */
@@ -1081,4 +1088,52 @@
 }
 .footer__left__coppyright span{
     color:var(--green-color);
+}
+.button__top{
+    height: 50px;
+    width:50px;
+    background:rgba(0,0,0,.7);
+    position: fixed;
+    border-radius:50%;
+    bottom:50px;
+    right:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 99;
+}
+.button__top i {
+    color:var(--white-color);
+}
+
+/* Modal */
+.modal__video{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    z-index: 4;
+    display:none;
+}
+.modal__video__overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:rgba(0,0,0,.45)
+}
+.modal__video__main{
+    width: 50%;
+    height: 55%;
+    margin:150px auto;
+    position: relative;
+}
+.modal__video__main i{
+    position: absolute;
+    color:var(--white-color);
+    font-size: 30px;
+    top:-30px;
+    right:0;
+    cursor: pointer;
 }
